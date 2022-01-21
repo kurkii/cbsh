@@ -25,6 +25,7 @@ int main(){
             printf("calc - cool calculator \n");
             printf("exit - exits this shell thingy (kernel panics if you use cbsh as init)\n");
             printf("vim - opens the vim text editor\n");
+            printf("insvim - install vim text editor\n");
             printf("ver - shows version\n");
             printf("bird - prints out bird :)\n");
             printf("yourmom - gives a yo mama joke \n");
