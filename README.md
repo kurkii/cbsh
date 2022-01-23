@@ -1,5 +1,5 @@
 # cbsh
-cool bird shell - a shell made in C
+cool bird shell - a *meme* shell made in C
 
 # how to install
 
