@@ -2,10 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
-
-
-
 int main(){
     char input[150];
 
@@ -64,30 +60,36 @@ int main(){
 
                 printf("The answer is %.2f\n", firstDigit + secondDigit);
                 continue;
+
             }else if(strcmp(mathOperation, "sub") == 0){
 
                 printf("The answer is %.2f\n", firstDigit - secondDigit);
                 continue;
+
             }else if(strcmp(mathOperation, "div")== 0){
 
                 printf("The answer is %.2f\n", firstDigit / secondDigit);
                 continue;
+
             }else if(strcmp(mathOperation, "mul")== 0){
 
                 printf("The answer is %.2f\n", firstDigit * secondDigit);
                 continue;
+
             }else{
 
                 printf("Error\n");
                 return -1; // im quirky
 
             }
+
         } else if(strcmp(input, "exit") == 0) {
 
             return EXIT_SUCCESS;
+
         } else if(strcmp(input, "ver") == 0){
 
-            printf("cool bird shell (cbsh) | version 1.3 \n");
+            printf("cool bird shell (cbsh) | version 1.4 \n");
             continue;
 
         } else if(strcmp(input, "bird") == 0) {
@@ -140,6 +142,7 @@ int main(){
                     printf("Yo mama's so depressing, blues singers come to visit her when they've got writer's block.\n ");
                     continue;
             }
+
         } else if(strcmp(input, "login") == 0){
 
             char userName[20];
@@ -182,39 +185,36 @@ int main(){
 
         } else if(strcmp(input, "insvim") == 0){
 
-
             char distro[5];
             printf("What is your distro / distro based off? (debian/fedora/arch)\n");
             scanf(" %s", distro);
 
             if(strcmp(distro, "debian") == 0){
                 printf("Installing vim for debian\n");
-                system("apt-get install vim");
+                system("sudo apt-get install vim");
                 continue;
 
             } else if(strcmp(distro, "arch") == 0){
                 printf("Installing vim for arch");
-                system("pacman -S vim");
+                system("sudo pacman -S vim");
                 continue;
 
             } else if(strcmp(distro, "fedora") == 0){
                 printf("Installing vim for fedora");
-                system("dnf install vim");
+                system("sudo dnf install vim");
                 continue;
+
             } else {
                 printf("Invalid distro");
                 continue;
+
             }
-
         }
-
 
         if (strcmp(input, "") != 0) {
             printf("Unknown command \"%s\", type 'help' for help\n", input);
             continue;
         }
-
-
     }
-
 }
+
